@@ -101,8 +101,8 @@ Paste your live GitHub Pages link here:
 ## 🛠 **Tech Stack**
 
 * **HTML5**
-* **CSS3**
-* **JavaScript (Vanilla JS)**
+* **CSS**
+* **JavaScript**
 * LocalStorage API
 
 ---
@@ -112,7 +112,10 @@ Paste your live GitHub Pages link here:
 This project is created as part of the Samsung Innovative Campus Hackathon by:
 
 * **Rohit Nag**
-* *(Add four more teammates here)*
+* *Riya Rajak*
+* *Srinjini Saha*
+* *Amrita Das*
+* *Utsadeep Kundu*
 
 ---
 
