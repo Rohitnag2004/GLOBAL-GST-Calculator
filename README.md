@@ -1,7 +1,7 @@
 # **🌐 Global GST/VAT Calculator**
 
 A modern, multi-country GST/VAT calculation tool designed with a clean UI and smooth UX.
-Built for the **Samsung Innovative Campus Hackathon**, this project simplifies tax calculation across different countries with support for custom rates, history tracking, and real-time results.
+Built for the **Samsung Innovation Campus Hackathon**, this project simplifies tax calculation across different countries with support for custom rates, history tracking, and real-time results.
 
 ---
 
