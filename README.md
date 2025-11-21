@@ -54,7 +54,7 @@ Includes:
 
 Exports complete history as a **CSV file** with one click.
 
-### **🌓 Light Mode UI**
+### **🌓 Mode UI**
 
 A clean, soft, and lightweight visual theme for easy readability.
 
@@ -68,7 +68,7 @@ Includes cursor animations and smooth hover interactions.
 
 Paste your live GitHub Pages link here:
 
-👉 **Live Website:** `https://rohitnag2004.github.io/GLOBAL-GST-Calculator/`
+👉 **Live Website:** (https://rohitnag2004.github.io/GLOBAL-GST-Calculator/)
 
 ---
 
