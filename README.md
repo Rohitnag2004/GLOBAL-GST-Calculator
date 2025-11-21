@@ -86,17 +86,6 @@ Paste your live GitHub Pages link here:
 
 ---
 
-## ⚙️ **Installation & Usage**
-
-### **Run Locally**
-
-```sh
-git clone https://github.com/yourusername/gst-calculator.git
-cd gst-calculator
-```
-
-Now open **index.html** in your browser.
-
 ### **Deploy on GitHub Pages**
 
 1. Go to **Settings** → **Pages**
