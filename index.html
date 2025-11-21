@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Tax Calculator | GST & Sales Tax</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom cursor elements (follower uses uploaded styles & script) -->
+    <div class="cursor-follower" id="cursor"></div>
+
+    <button class="theme-toggle" id="themeToggleBtn" aria-pressed="false" title="Toggle theme">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark Mode</span>
+    </button>
+
+    <div class="container">
+        <header>
+            <h1>Global Tax Calculator</h1>
+            <p class="subtitle">Calculate GST, Sales Tax & VAT across multiple countries (representative rates)</p>
+        </header>
+
+        <div class="calculator-card" role="region" aria-labelledby="calculator-title">
+            <div class="calculation-mode" role="tablist" aria-label="Calculation mode">
+                <button class="mode-option active" id="exclusive-btn" onclick="setCalculationMode('exclusive')" aria-pressed="true">
+                    <span>➕ Exclusive Tax</span>
+                </button>
+                <button class="mode-option" id="inclusive-btn" onclick="setCalculationMode('inclusive')" aria-pressed="false">
+                    <span>➖ Inclusive Tax</span>
+                </button>
+            </div>
+
+            <div class="mode-description" id="mode-description">
+                Add tax to the base amount (Price + Tax = Total)
+            </div>
+
+            <div class="input-group">
+                <label for="country">Select Country</label>
+                <select id="country" onchange="updateTaxRates()">
+                    <option value="india">India (GST)</option>
+                    <option value="usa">United States (Sales Tax)</option>
+                    <option value="uk">United Kingdom (VAT)</option>
+                    <option value="australia">Australia (GST)</option>
+                    <option value="canada">Canada (GST)</option>
+                    <option value="singapore">Singapore (GST)</option>
+                    <option value="newzealand">New Zealand (GST)</option>
+                    <option value="malaysia">Malaysia (SST/GST)</option>
+                    <option value="southafrica">South Africa (VAT)</option>
+                    <option value="uae">UAE (VAT)</option>
+                </select>
+            </div>
+
+            <!-- Example sub-region selector (for USA states/counties) -->
+            <div class="input-group" id="region-container" style="display:none;">
+                <label for="region">Select State / County (USA examples)</label>
+                <select id="region" onchange="updateRegionRate()">
+                    <option value="default" data-rate="">Select state/county</option>
+                    <option value="california" data-rate="7.25">California - 7.25% (base state rate)</option>
+                    <option value="texas" data-rate="6.25">Texas - 6.25% (base state rate)</option>
+                    <option value="newyork" data-rate="4">New York - 4% (state base)</option>
+                    <option value="cookcounty" data-rate="8.75">Cook County (IL) - 8.75% (example)</option>
+                    <option value="miami-dade" data-rate="7">Miami-Dade (FL) - 7% (example)</option>
+                </select>
+                <small style="color:var(--text-secondary)">Representative examples — local rates vary. Use Custom Rate to override.</small>
+            </div>
+
+            <div id="tax-info" class="tax-info-box" aria-live="polite"></div>
+
+            <div class="input-group">
+                <label for="amount" id="amount-label">Enter Amount (Base Price)</label>
+                <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01" />
+            </div>
+
+            <div class="input-group">
+                <label for="tax-rate">Select Tax Rate</label>
+                <select id="tax-rate" onchange="handleTaxRateChange()"></select>
+            </div>
+
+            <div class="custom-tax-input" id="custom-tax-container">
+                <label for="custom-tax">Enter Custom Tax Rate (%)</label>
+                <input type="number" id="custom-tax" placeholder="Enter custom rate" min="0" max="100" step="0.01" />
+            </div>
+
+            <button class="calculate-btn" onclick="calculate()">Calculate Tax</button>
+
+            <div class="results" id="results" aria-live="polite">
+                <div class="result-card">
+                    <div class="result-row">
+                        <span class="result-label">Base Amount:</span>
+                        <span class="result-value" id="base-amount">₹0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tax Rate:</span>
+                        <span class="result-value" id="tax-rate-display">0%</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tax Amount:</span>
+                        <span class="result-value" id="tax-amount">₹0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Amount:</span>
+                        <span class="result-value final-amount" id="total-amount">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Professional Tax Calculator | Supporting GST, Sales Tax & VAT calculations</p>
+            <p style="margin-top: 10px;">Rates shown are representative — verify with local authority or use Custom Rate.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cursor-script.js"></script>
+</body>
+</html>
