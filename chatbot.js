@@ -31,7 +31,7 @@
     const r = document.createElement('div');
     r.id = ROOT;
     r.innerHTML = `<div class="chatbot-box" id="cb-box" role="dialog" aria-label="AI assistant">
-       <div class="chat-header">Pro+ AI Assistant <span id="cb-close" style="cursor:pointer;">✕</span></div>
+       <div class="chat-header">AI Assistant <span id="cb-close" style="cursor:pointer;">✕</span></div>
        <div class="chat-msgs" id="cb-msgs" aria-live="polite"></div>
        <div class="chat-suggestions" id="cb-suggestions"></div>
        <div class="chat-input">
