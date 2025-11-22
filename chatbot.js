@@ -48,7 +48,6 @@
   const KB = [
     {id:'polite_intro', keywords:['hello','hi','greetings'], title:'Greeting', answer:'Hello — I am your Pro+ assistant. I respond politely and can help with GST calculations and algorithm explanations. How may I assist you today?'},
     {id:'gst_help', keywords:['gst','calculate gst','goods and services tax'], title:'GST help', answer:'I can compute GST exclusive/inclusive, explain formulas, and provide examples. Ask: "Calculate GST for 1000 at 18% exclusive" or "GST inclusive for 1180 at 18%".'},
-    {id:'algorithms', keywords:['algorithm','quicksort','binary search','time complexity','dp','dynamic programming'], title:'Algorithms', answer:'I can provide step-by-step solutions, complexity analysis, examples, and code templates in Python and JavaScript.'},
     {id:'about', keywords:['about','version'], title:'About', answer:'Pro+ Assistant v3.0 — polite, accurate, algorithm-capable, and GST-specialist. Runs locally in your browser.'}
   ];
 
